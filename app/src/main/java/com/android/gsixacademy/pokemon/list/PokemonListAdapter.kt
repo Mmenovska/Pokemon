@@ -32,6 +32,10 @@ class PokemonListAdapter (
                 itemView.text_view_position.text = position.toString()
                 var pokemonId = itemModel.url?.trimEnd ('/')?.substringAfterLast('/')
                 Picasso.get().load("https://pokeres.bastionbot.org/images/pokemon/${pokemonId}.png").fit().centerInside().into(itemView.image_view_pokemon)
+                itemView.constraint_layout_main.setOnClickListener {
+                    pokemonListAdapterClickEvent.invoke(PokemonListAdapterClickEvent.PokemonListAdapterItemClicked(itemModel))
+                }
             }
         }
+
     }
