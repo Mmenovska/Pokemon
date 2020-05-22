@@ -38,7 +38,7 @@ class PokemonListActivity : AppCompatActivity() {
                 if (pokemons != null) {
                     var pokemonListAdapter = PokemonListAdapter(pokemons) {
                         if (it is PokemonListAdapterClickEvent.PokemonListAdapterItemClicked){
-                        startActivity(Intent(applicationContext, PokemonDetailsActivity::class.java).putExtra("pokemonName",it.pokemonResult.name))
+                        startActivity(Intent(applicationContext, PokemonDetailsActivity::class.java).putExtra("pokemonName",it.pokemonResult.name).putExtra("pokemonImage", it.pokemonResult.url))
                     }}
                     recycle_view_pokemons.adapter = pokemonListAdapter
 

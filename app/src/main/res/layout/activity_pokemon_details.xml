@@ -33,6 +33,122 @@
         android:text="Name"
         android:textAllCaps="true"
         />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_pokemon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_view_pokemon_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="16dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/text_view_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            />
+        <TextView
+            android:id="@+id/text_view_position_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/text_view_info_name"
+            app:layout_constraintTop_toTopOf="@id/text_view_info_name"
+            android:textColor="@color/White"
+            android:layout_marginStart="6dp"/>
+
+        <TextView
+            android:id="@+id/text_view_ability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_view_position_details"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="6dp"
+            android:background="#429BED"
+            android:textColor="@color/White"
+            android:textAllCaps="true"/>
+        <TextView
+            android:id="@+id/text_view_ability_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/text_view_ability"
+            app:layout_constraintTop_toBottomOf="@id/text_view_position_details"
+            android:background="#429BED"
+            android:textColor="@color/White"
+            android:layout_marginStart ="6dp"
+            android:textAllCaps="true"/>
+        <TextView
+            android:id="@+id/text_view_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="6dp"
+            android:textColor="@color/White"
+            android:text="Height : " />
+        <TextView
+            android:id="@+id/text_view_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_height"
+            android:text="Weight : "
+            android:textColor="@color/White"/>
+        <ImageView
+            android:id="@+id/image_view_square"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/check_box_empty_square"
+            app:layout_constraintTop_toBottomOf="@id/text_view_weight"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/image_view_star"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toStartOf="@id/image_view_square"
+            app:layout_constraintTop_toBottomOf="@id/text_view_weight"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_star_white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_pokemon"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="16dp">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/text_view_base_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:text="Base stats"
+            android:textColor="@color/White"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
