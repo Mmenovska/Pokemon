@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark">
+    <ImageView
+        android:id="@+id/image_view_pokemon_detail"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        android:background="@color/colorPrimary"/>
+    <ImageView
+        android:id="@+id/image_view__back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_arrow_back"
+        app:layout_constraintTop_toTopOf="@id/image_view_pokemon_detail"
+        app:layout_constraintStart_toStartOf="@id/image_view_pokemon_detail"
+        android:layout_margin="16dp"/>
+    <TextView
+        android:id="@+id/text_view_pokemon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_pokemon_detail" _toBottomOf="@id/image_view_pokemon_detail"
+        app:layout_constraintStart_toStartOf="@id/image_view_pokemon_detail"
+        android:layout_margin="16dp"
+        android:textColor="@color/White"
+        android:text="Name"
+        android:textAllCaps="true"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_pokemon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_view_pokemon_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="16dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/text_view_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/White"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"
+            style="@style/TextAppearance.AppCompat.Medium"
+            />
+        <TextView
+            android:id="@+id/text_view_position_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/text_view_info_name"
+            app:layout_constraintTop_toTopOf="@id/text_view_info_name"
+            android:textColor="@color/White"
+            android:layout_marginStart="6dp"/>
+
+        <TextView
+            android:id="@+id/text_view_ability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_view_position_details"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="6dp"
+            android:background="#429BED"
+            android:textColor="@color/White"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/text_view_ability_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/text_view_ability"
+            app:layout_constraintTop_toBottomOf="@id/text_view_position_details"
+            android:background="#429BED"
+            android:textColor="@color/White"
+            android:layout_marginStart ="6dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/text_view_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="6dp"
+            android:textColor="@color/White"
+            android:text="Height : " />
+        <TextView
+            android:id="@+id/text_view_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_height"
+            android:text="Weight : "
+            android:textColor="@color/White"/>
+        <ImageView
+            android:id="@+id/image_view_square"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/square_white"
+            app:layout_constraintTop_toBottomOf="@id/text_view_weight"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/image_view_star"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toStartOf="@id/image_view_square"
+            app:layout_constraintTop_toBottomOf="@id/text_view_weight"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/star"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
